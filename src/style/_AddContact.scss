@@ -1,0 +1,22 @@
+@import 'utils';
+
+.subHead {
+    font: $sub-head-font;
+    color: $theme-color;
+    margin: 0.75rem 0;
+    width: fit-content;
+    height: fit-content;
+    pointer-events: none;
+}
+
+.btnAdd {
+    @extend .btn;
+    @include set-color(#5555f0);
+    font: $btn-font;
+}
+
+.form {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 0.5rem;
+}

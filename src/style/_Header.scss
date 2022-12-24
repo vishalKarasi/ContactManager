@@ -1,0 +1,7 @@
+@import 'utils';
+
+.head {
+    font: $head-font;
+    color: $theme-color;
+    pointer-events: none;
+}

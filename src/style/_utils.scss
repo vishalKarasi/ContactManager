@@ -1,0 +1,22 @@
+// variable
+$font-color: black;
+$background-color: white;
+$theme-color: crimson;
+$head-font: 800 1.5rem poppins;
+$sub-head-font: 600 1.5rem open-sans;
+$btn-font: 600 1rem roboto;
+
+// fuction
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+
+// mixins
+@mixin set-color($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
