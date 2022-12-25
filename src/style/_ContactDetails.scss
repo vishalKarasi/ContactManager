@@ -1,0 +1,17 @@
+@import 'utils';
+
+.card {
+    flex-direction: column;
+    background-color: cyan;
+    width: 250px;
+    height: 300px;
+    border-radius: 0.5rem;
+    .img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        img {
+            border-radius: inherit;
+        }
+    }
+}

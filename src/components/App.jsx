@@ -5,20 +5,21 @@ import "../style/App.scss";
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
+import ContactDetails from "./ContactDetails";
 
 const App = () => {
   const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
 
-  // function to get id from ContactList
+  // function to get ID from ContactList
   const addContactHandler = (contact) => {
-    setContacts([...contacts, { id: uuid(), ...contact }]);
+    setContacts([...contacts, { ID: uuid(), ...contact }]);
   };
 
   // function to remove contacts
-  const removeContactHandler = (id) => {
+  const removeContactHandler = (ID) => {
     const newContactList = contacts.filter((contact) => {
-      return contact.id !== id;
+      return contact.ID !== ID;
     });
     setContacts(newContactList);
   };
@@ -55,6 +56,7 @@ const App = () => {
             path="AddContact"
             element={<AddContact addContactHandler={addContactHandler} />}
           />
+          <Route path="ContactDetails" element={<ContactDetails />} />
         </Routes>
       </Router>
     </div>

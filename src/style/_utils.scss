@@ -20,3 +20,24 @@ $btn-font: 600 1rem roboto;
     background-color: $color;
     color: set-text-color($color);
 }
+
+// loops & statements
+
+// $props: (
+//     c: center,
+//     fs: flex-start,
+//     fe: flex-end,
+//     sa: space-around,
+//     se: space-evenly,
+//     sb: space-between,
+// );
+
+// @each $key1, $val1 in $props {
+//     @each $key2, $val2 in $props {
+//         .flex-#{$key1}-#{$key2} {
+//             display: flex;
+//             justify-content: #{$val1};
+//             align-items: #{$val2};
+//         }
+//     }
+// }

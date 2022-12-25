@@ -1,32 +1,36 @@
 @import 'utils';
 
 .content {
-    justify-content: flex-start !important;
-    position: relative;
+    width: 100%;
+    padding: 0.5rem 0;
+    justify-content: space-evenly !important;
 
     .faUser {
-        width: 30px;
+        width: 12%;
         height: 30px;
-        margin: 0 18px 0 13px;
         cursor: pointer;
+        transition: 0.25s ease-in-out;
+        &:hover {
+            transform: scale(80%);
+        }
     }
 
     .wrapper {
+        width: 70%;
         .name {
             font-weight: 600;
+            overflow-wrap: break-word;
         }
 
         .email {
-            font-size: 75%;
+            font-size: 70%;
             font-weight: 70%;
         }
     }
 
     .faTrash {
-        width: 22px;
+        width: 10%;
         height: 22px;
-        position: absolute;
-        right: 1rem;
         cursor: pointer;
         transition: 0.25s ease-in-out;
 

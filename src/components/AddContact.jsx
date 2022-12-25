@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 const AddContact = (props) => {
+  // creating user obj
+  const navigate = useNavigate();
   const [state, setState] = useState({
     id: "",
     name: "",
     email: "",
   });
 
-  const handleInput = (e) => {
+  // fetching and storing user info
+  const getData = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setState({ ...state, [name]: value });
   };
 
-  const add = (e) => {
+  const postData = (e) => {
     e.preventDefault();
     if (state.name === "" || state.email === "") {
       alert("All field are mandatory");
@@ -22,32 +24,31 @@ const AddContact = (props) => {
     }
     props.addContactHandler(state);
     setState({ name: "", email: "" });
-    const navigate = useNavigate();
     navigate("/");
   };
 
   return (
     <div className="container">
       <div className="subHead">Add Contact</div>
-      <form onSubmit={add} className="flex form">
-        <div className="field">
-          <label htmlFor="name">Name: </label>
+      <form onSubmit={postData} className="flex form">
+        <div className="flex field">
+          <div className="label">Name</div>
           <input
             type="text"
             name="name"
             autoComplete="off"
             value={state.name}
-            onChange={handleInput}
+            onChange={getData}
           />
         </div>
-        <div className="field">
-          <label htmlFor="email">Email: </label>
+        <div className="flex field">
+          <div className="label">Email</div>
           <input
             type="text"
             name="email"
             autoComplete="off"
             value={state.email}
-            onChange={handleInput}
+            onChange={getData}
           />
         </div>
         <button type="submit" className="btnAdd">

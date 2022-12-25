@@ -19,12 +19,14 @@ const ContactList = (props) => {
 
   return (
     <div className="container">
-      <div className="subHead">Contact List</div>
-      <Link to="/AddContact">
-        <button type="submit" className="btnAdd">
-          Add New Contact
-        </button>
-      </Link>
+      <div className="flex content">
+        <div className="subHead">Contact List</div>
+        <Link to="/AddContact">
+          <button type="submit" className="btnAdd">
+            Add New Contact
+          </button>
+        </Link>
+      </div>
       {renderContactList}
     </div>
   );
