@@ -1,16 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import user from "../img/user.jpg";
-const ContactDetails = () => {
+const ContactDetails = (props) => {
+  const location = useLocation();
+  const contact = location.state.contact;
   return (
-    <div className="container flex-c-c">
-      <div className="card flex-sa-c">
+    <div className="flex col container">
+      <div className="flex col card">
         <div className="img">
-          <img src={user} alt="" srcset="" />
+          <img src={user} alt="userImg" />
         </div>
-        <div className="content flex-c-c">
-          <div className="head">Vishal</div>
-          <div className="sub-head">vk@gmail.com</div>
+        <div className="flex col info">
+          <div className="head">{contact.name}</div>
+          <div className="sub-head">{contact.email}</div>
         </div>
       </div>
       <Link to="/">

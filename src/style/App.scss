@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     font: 400 1rem montserrat;
-    outline: none;
 }
 
 body {
@@ -29,7 +28,6 @@ img {
 .head {
     font: $head-font;
     text-align: center;
-    padding: 5px 0;
     color: $theme-color;
     pointer-events: none;
 }
@@ -37,7 +35,6 @@ img {
 .subHead {
     font: $sub-head-font;
     text-align: center;
-    padding: 5px 0;
     color: $theme-color;
     pointer-events: none;
 }
@@ -46,6 +43,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.col {
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .container {

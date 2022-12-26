@@ -10,17 +10,27 @@
 
         .label {
             position: absolute;
-            letter-spacing: 4px;
+            letter-spacing: 2.5px;
             margin: 0 5px 0;
             pointer-events: none;
+            transition: 0.4s ease-in-out;
+            text-align: center;
         }
         input {
             width: 30ch;
-            padding: 5px;
+            padding: 8px;
+            outline: none;
             transition: 0.4s ease-in-out;
+            box-shadow: 0 0 4px black;
+            border-radius: 4px;
 
-            &:focus .label {
-                transform: translate(10px, -18px);
+            &:focus {
+                border: 2px solid $theme-color;
+            }
+
+            &:focus ~ .label {
+                color: $theme-color;
+                transform: translate(10px, -20px);
                 background-color: $background-color;
             }
         }

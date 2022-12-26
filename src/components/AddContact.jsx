@@ -4,7 +4,6 @@ const AddContact = (props) => {
   // creating user obj
   const navigate = useNavigate();
   const [state, setState] = useState({
-    id: "",
     name: "",
     email: "",
   });
@@ -32,7 +31,6 @@ const AddContact = (props) => {
       <div className="subHead">Add Contact</div>
       <form onSubmit={postData} className="flex form">
         <div className="flex field">
-          <div className="label">Name</div>
           <input
             type="text"
             name="name"
@@ -40,9 +38,9 @@ const AddContact = (props) => {
             value={state.name}
             onChange={getData}
           />
+          <span className="label">Name</span>
         </div>
         <div className="flex field">
-          <div className="label">Email</div>
           <input
             type="text"
             name="email"
@@ -50,6 +48,7 @@ const AddContact = (props) => {
             value={state.email}
             onChange={getData}
           />
+          <span className="label">Email</span>
         </div>
         <button type="submit" className="btnAdd">
           Add

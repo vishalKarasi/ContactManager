@@ -8,7 +8,10 @@ const ContactCard = (props) => {
     <div className="container">
       <div className="flex content">
         <div className="faUser">
-          <Link>
+          <Link
+            to="ContactDetails/${props.contacID}"
+            state={{ contact: props.contact }}
+          >
             <FaUserCircle size="100%" color="5555f0" />
           </Link>
         </div>

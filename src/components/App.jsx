@@ -56,7 +56,7 @@ const App = () => {
             path="AddContact"
             element={<AddContact addContactHandler={addContactHandler} />}
           />
-          <Route path="ContactDetails" element={<ContactDetails />} />
+          <Route path="ContactDetails/:ID" element={<ContactDetails />} />
         </Routes>
       </Router>
     </div>
