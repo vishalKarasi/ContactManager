@@ -26,7 +26,9 @@ const App = () => {
 
   // function to set and get contacts from local storage
   useEffect(() => {
-    window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
+    if (contacts) {
+      window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   useEffect(() => {

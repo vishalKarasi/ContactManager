@@ -34,7 +34,7 @@ const AddContact = (props) => {
           <input
             type="text"
             name="name"
-            autoComplete="off"
+            required="required"
             value={state.name}
             onChange={getData}
           />
@@ -44,7 +44,7 @@ const AddContact = (props) => {
           <input
             type="text"
             name="email"
-            autoComplete="off"
+            required="required"
             value={state.email}
             onChange={getData}
           />
