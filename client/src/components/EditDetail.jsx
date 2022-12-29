@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-const AddContact = (props) => {
-  // creating user obj
+import { React, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+
+const EditDetail = (props) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const contact = location.state.contact;
   const [state, setState] = useState({
-    name: "",
-    email: "",
+    id: contact.id,
+    name: contact.name,
+    email: contact.email,
   });
 
   // fetching and storing user info
@@ -15,21 +18,21 @@ const AddContact = (props) => {
     setState({ ...state, [name]: value });
   };
 
-  const postData = (e) => {
+  const updateData = (e) => {
     e.preventDefault();
     if (state.name === "" || state.email === "") {
       alert("All field are mandatory");
       return;
     }
-    props.addContactHandler(state);
+    props.updateContactHandler(state);
     setState({ name: "", email: "" });
     navigate("/");
   };
 
   return (
     <div className="container">
-      <div className="subHead">Add Contact</div>
-      <form method="post" onSubmit={postData} className="flex form">
+      <div className="subHead">Edit Contact</div>
+      <form method="post" onSubmit={updateData} className="flex form">
         <div className="flex field">
           <input
             type="text"
@@ -51,11 +54,11 @@ const AddContact = (props) => {
           <span className="label">Email</span>
         </div>
         <button type="submit" className="btn">
-          Add
+          Update
         </button>
       </form>
     </div>
   );
 };
 
-export default AddContact;
+export default EditDetail;

@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "id": "a33b2c3c-9440-54e6-d80b-0b2d40cce8f3",
+      "name": "Vishal Karasi",
+      "email": "vsk@gmail.com"
+    },
+    {
+      "id": "342c0508-c03d-0423-f2a9-18f3ea35b91f",
+      "name": "Omkar gupta",
+      "email": "og@gmail.com"
+    },
+    {
+      "id": "784002cb-624c-00d9-a9b3-e4be478d4297",
+      "name": "Kinesh Lohar",
+      "email": "kl@gmail.com"
+    },
+    {
+      "id": "9e106a1f-c26f-23c5-c26f-c6c3e0a00660",
+      "name": "Pratick Chaubey",
+      "email": "pc@gmail.com"
+    },
+    {
+      "id": "f28e1389-70a4-fd42-9430-9dc7b39943ae",
+      "name": "Axel Zoldyck",
+      "email": "az@gmail.com"
+    },
+    {
+      "id": "acd318ef-b9c0-e3fd-4e7c-ad27672e1f63",
+      "name": "Vinay Chaudery",
+      "email": "vc@gmail.com"
+    },
+    {
+      "id": "4a1347f4-d7c1-59ed-3242-102798c59b0d",
+      "name": "Kalpesh Solanki",
+      "email": "ks@gmail.com"
+    }
+  ]
+}

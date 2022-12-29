@@ -16,7 +16,7 @@ const ContactDetails = (props) => {
         </div>
       </div>
       <Link to="/">
-        <button className="btnAdd">View Contact List</button>
+        <button className="btn">View Contact List</button>
       </Link>
     </div>
   );

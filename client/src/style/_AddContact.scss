@@ -19,7 +19,6 @@
         input {
             width: 30ch;
             padding: 8px;
-            outline: none;
             transition: 0.4s ease-in-out;
             box-shadow: 0 0 4px black;
             border-radius: 4px;
@@ -38,10 +37,4 @@
             }
         }
     }
-}
-
-.btnAdd {
-    @extend .btn;
-    @include set-color(#5555f0);
-    font: $btn-font;
 }

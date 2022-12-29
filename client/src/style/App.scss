@@ -2,6 +2,8 @@
 @import 'AddContact';
 @import 'ContactCard';
 @import 'ContactDetails';
+@import 'ContactList';
+
 @import 'utils';
 
 // style reset
@@ -16,6 +18,7 @@
 
 body {
     min-height: 100vh;
+    overflow: hidden;
 }
 
 img {
@@ -27,6 +30,7 @@ img {
 
 .head {
     font: $head-font;
+    margin: 5px 0;
     text-align: center;
     color: $theme-color;
     pointer-events: none;
@@ -34,6 +38,7 @@ img {
 
 .subHead {
     font: $sub-head-font;
+    margin: 5px 0;
     text-align: center;
     color: $theme-color;
     pointer-events: none;
@@ -60,10 +65,11 @@ img {
 }
 
 .btn {
-    display: inline-block;
+    @include set-color(#5555f0);
+    font: $btn-font;
     margin: 5px 0;
+    padding: 10px;
     border-radius: 5px;
-    padding: 8px 25px;
     border: none;
     cursor: pointer;
     transition: 0.25s ease-in-out;

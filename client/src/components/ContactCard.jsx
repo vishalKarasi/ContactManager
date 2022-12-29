@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from "react-icons/fa";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaTrashAlt, FaEdit } from "react-icons/fa";
 
 const ContactCard = (props) => {
   return (
@@ -9,7 +8,7 @@ const ContactCard = (props) => {
       <div className="flex content">
         <div className="faUser">
           <Link
-            to="ContactDetails/${props.contacID}"
+            to={`ContactDetails/${props.contact.id}`}
             state={{ contact: props.contact }}
           >
             <FaUserCircle size="100%" color="5555f0" />
@@ -19,12 +18,17 @@ const ContactCard = (props) => {
           <div className="name">{props.contact.name}</div>
           <div className="email">{props.contact.email}</div>
         </div>
-        <div className="faTrash">
+        <div className="faicon">
+          <Link to={`EditDetail`} state={{ contact: props.contact }}>
+            <FaEdit size="100%" color="55AE54" />
+          </Link>
+        </div>
+        <div className="faicon">
           <FaTrashAlt
             size="100%"
             color="crimson"
             onClick={() => {
-              props.clickHandler(props.contact.ID);
+              props.clickHandler(props.contact.id);
             }}
           />
         </div>
